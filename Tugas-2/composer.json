@@ -1,0 +1,12 @@
+{
+    "name": "raditya/tugas-2",
+    "authors": [
+        {
+            "name": "radityafs",
+            "email": "radityafiqa4@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.6"
+    }
+}
