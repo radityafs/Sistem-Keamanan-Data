@@ -33,11 +33,12 @@ if (isset($_POST['name'], $_POST["username"], $_POST["email"], $_POST["password"
     $name = $conn->escape_string($name);
     $username = $conn->escape_string($username);
     $email = $conn->escape_string($email);
-    $password = $conn->escape_string($password);
     $province = $conn->escape_string($province);
     $token = bin2hex(random_bytes(36));
 
-    $sql = "INSERT INTO users (name, username, email, password, province, role, token, is_verified) VALUES ('$name', '$username', '$email', '$password', '$province','user', '$token',0)";
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO users (name, username, email, password, province, role, token, is_verified) VALUES ('$name', '$username', '$email', '$password_hash', '$province','user', '$token',0)";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
