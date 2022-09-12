@@ -1,9 +1,10 @@
 # Tugas 1 Mata Kuliah Sistem Keamanan Data
 
-make simple authentication web for login
-with role based authentication
+## Please update database configuration in /handler/db_connection and SMTP configuration in /handler/email_handler
 
-\*Please Update database configuration in folder ./handler/db_connection.php\*
+make simple authentication web for registration, and confirm email
+feature :
 
-1. admin, default account details username admin, password admin
-2. user, default account details username user, password user
+1. validation form (password,email,username)
+2. escape string validation
+3. send email confirmation using PHPMailer
